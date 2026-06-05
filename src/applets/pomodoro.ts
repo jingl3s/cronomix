@@ -46,6 +46,7 @@ export class PomodoroApplet extends Applet<Events> {
 
         values: {
             show_panel_label:       { tag: 'boolean', value: true },
+            dnd_on_pomodoro:        { tag: 'boolean', value: false },
             panel_position:         { tag: 'enum',    value: PanelPosition.RIGHT, enum: Object.values(PanelPosition) },
             notif_sound:            { tag: 'file',    value: ext.path + '/data/sounds/beeps.ogg', start: ext.path + '/data/sounds/' },
             clock_size:             { tag: 'number',  value: 0, range: [0, 2000] },
@@ -57,7 +58,7 @@ export class PomodoroApplet extends Applet<Events> {
         },
 
         groups: [
-            ['show_panel_label', 'panel_position', 'clock_size', 'notif_sound'],
+            ['show_panel_label', 'dnd_on_pomodoro', 'panel_position', 'clock_size', 'notif_sound'],
             ['open', 'show_presets'],
         ],
 
@@ -67,6 +68,7 @@ export class PomodoroApplet extends Applet<Events> {
 
         translations: {
             show_panel_label: _('Show time in panel'),
+            dnd_on_pomodoro: _('Do not disturb during Pomodoro'),
             panel_position: _('Panel position'),
             clock_size: _('Clock size'),
             notif_sound: _('Notification sound'),
@@ -130,7 +132,7 @@ export class PomodoroApplet extends Applet<Events> {
     }
 
     #set_dnd (enable: boolean) {
-        if (enable && !this.#dnd_active) {
+        if (enable && !this.#dnd_active && this.storage.read.dnd_on_pomodoro.value) {
             this.#dnd_was_showing_banners = this.#dnd_settings.get_boolean('show-banners');
             this.#dnd_settings.set_boolean('show-banners', false);
             this.#dnd_active = true;
