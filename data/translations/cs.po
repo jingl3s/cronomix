@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-20 17:53+0200\n"
+"POT-Creation-Date: 2026-06-05 10:34-0400\n"
 "PO-Revision-Date: 2023-06-05 16:07+0200\n"
 "Last-Translator: Ludek Vydra <lvtran@u.k2.cz>\n"
 "Language-Team: \n"
@@ -17,134 +17,326 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.3.1\n"
 
-msgid "Image not found"
-msgstr "Obrázek nenalezen"
-
-msgid "Ok"
-msgstr "Ok"
-
 msgid ""
-"Right click any of the extension panel items to access the global settings."
-msgstr ""
-"Kliknutím pravým tlačítkem na položku panelu rozšíření získáte přístup ke "
-"globálním nastavením."
-
-msgid "Tip"
-msgstr "Tip"
-
-msgid "Note"
-msgstr "Poznámka"
-
-msgid "Warning"
-msgstr "Varování"
-
-#, fuzzy
-msgid "Important"
-msgstr "Důležité"
-
-msgid "Set shortcut"
-msgstr "Nastav klávesovou zkratku"
-
-msgid "Type shortcut (backspace to reset)"
-msgstr "Stikni klávesovou zkratku (backspace pro resetování)"
-
-msgid "Sun"
-msgstr "Ne"
-
-msgid "Mon"
-msgstr "Po"
-
-msgid "Tue"
-msgstr "Út"
-
-msgid "Wed"
-msgstr "St"
-
-msgid "Thu"
-msgstr "Čt"
-
-msgid "Fri"
-msgstr "Pá"
-
-msgid "Sat"
-msgstr "So"
-
-msgid "Today"
-msgstr "Dnes"
-
-msgid "Week"
-msgstr "Týden"
-
-msgid "Month"
-msgstr "Měsíc"
-
-msgid "Year"
-msgstr "Rok"
-
-msgid "Confirm"
-msgstr "Potvrď"
-
-msgid "Select folder"
-msgstr "Vyber adresář"
-
-msgid "Select file"
-msgstr "Vyber soubor"
-
-msgid "Show more"
-msgstr "Zobrazit více"
-
-msgid ""
-"Number of items shown each time you press \"show more\" in a scroll list.\n"
-"Making this number very large can cause performance issues."
+"Set to 0 for default font size.\n"
+"You can also adjust the font size by scrolling the mouse wheel over the "
+"clock label."
 msgstr ""
 
-msgid "Todo"
-msgstr "Todo"
-
-msgid "Alarm"
-msgstr "Budík"
-
-msgid "Timer"
-msgstr "Časovač"
-
-msgid "Pomodoro"
-msgstr "Pomodoro"
-
-msgid "Stopwatch"
-msgstr "Stopky"
-
-msgid "Flashcards"
-msgstr ""
-
-msgid "Theme css (empty for auto selection)"
-msgstr "Motiv css (prázdný pro automatický výběr)"
-
-msgid "Lazy list page size"
-msgstr "Velikost stránky lazy listu"
-
-msgid "Left"
-msgstr "Vlevo"
-
-msgid "Center"
-msgstr "Střed"
-
-msgid "Right"
-msgstr "Vpravo"
-
-msgid "Settings"
-msgstr "Nastavení"
-
-msgid "Website"
-msgstr "Webové stránky"
+msgid "Show time in panel"
+msgstr "Zobrazit čas v panelu"
 
 msgid "Panel position"
 msgstr "Pozice panelu"
+
+msgid "Clock size"
+msgstr ""
 
 msgid "Notification sound"
 msgstr "Zvuk upozornění"
 
 msgid "Open"
 msgstr "Otevři"
+
+msgid "Show presets"
+msgstr "Předvolby"
+
+#, fuzzy
+msgid "Timer elapsed."
+msgstr "Časovač vypršel!"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Pause"
+msgstr "Pauza"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Add Preset"
+msgstr "Přidat předvolbu"
+
+msgid "Time"
+msgstr "Čas"
+
+msgid "Cancel"
+msgstr "Zruš"
+
+msgid "Invalid time selected."
+msgstr "Zvolen neplatný čas."
+
+msgid "Timer Elapsed!"
+msgstr "Časovač vypršel!"
+
+msgid "Dismiss"
+msgstr "Odvolat"
+
+msgid "Restart"
+msgstr "Restart"
+
+msgid "Resume"
+msgstr "Obnovení"
+
+msgid "Lap"
+msgstr "Kolo"
+
+msgid "Copy"
+msgstr "Kopírovat"
+
+msgid "Lap Time"
+msgstr "Čas kola"
+
+msgid "Overall Time"
+msgstr "Celkový čas"
+
+msgid "Lap Times"
+msgstr "Čas kol"
+
+msgid "Laps table copied to clipboard!"
+msgstr "Tabulka kol zkopírována do schránky!"
+
+msgid "Pomodoro"
+msgstr "Pomodoro"
+
+msgid "Long Break"
+msgstr "Dlouhá pauza"
+
+msgid "Short Break"
+msgstr "Krátká pauza"
+
+#, fuzzy
+msgid "Pomodoro phase change."
+msgstr "Délka Pomodoro"
+
+msgid "Phase"
+msgstr "Fáze"
+
+msgid "Completed pomodoros"
+msgstr "Dokončených Pomodor"
+
+msgid "Pomodoros until long break"
+msgstr "Pomodor do dlouhé přestávky"
+
+msgid "Pomodoro length"
+msgstr "Délka Pomodoro"
+
+msgid "Short break length"
+msgstr "Délka krátké pauzy"
+
+msgid "Long break length"
+msgstr "Délka dlouhé pauzy"
+
+msgid "Long break every n pomodoros"
+msgstr "Dlouhá pauza každý n pomodor"
+
+msgid "Ascending"
+msgstr "Vzestupně"
+
+msgid "Descending"
+msgstr "Sestupně"
+
+msgid "Select time tracker file"
+msgstr "Zvol soubor sledování času"
+
+msgid "Filter expression"
+msgstr "Výraz filtru"
+
+#, fuzzy
+msgid "Date (e.g., 2000-01-24)"
+msgstr "Datum (například 2023-12-24)"
+
+msgid "Since"
+msgstr "Od"
+
+msgid "Until"
+msgstr "Do"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Totals"
+msgstr "Celkem"
+
+msgid "Search results copied to clipboard!"
+msgstr "Výsledek hledání zkopírován do schránky!"
+
+msgid "All Time"
+msgstr "Po celou dobu"
+
+msgid "Per Slot Totals"
+msgstr "Celkové součty na slot"
+
+msgid "Task text copied to clipboard!"
+msgstr "Text úlohy zkopírován do schránky!"
+
+msgid "Add Task"
+msgstr "Přidej úkol"
+
+msgid "Add Filter"
+msgstr "Přidej filtr"
+
+msgid "## Filter Groups"
+msgstr "## Skupina filtrů"
+
+msgid "Each filter in a group creates a column of tasks in the main view."
+msgstr "Každý filtr ve skupině vytvoří sloupec úloh v hlavním zobrazení."
+
+#, fuzzy
+msgid ""
+"If no group is selected, a group with 1 ``* & !hide`` filter is created."
+msgstr ""
+"Pokud není vybrána žádná skupina, vytvoří se skupina s 1 filtrem ``*``."
+
+msgid "Tasks go into the first column from the left whose filter they pass."
+msgstr "Úkoly jsou zařazeny do prvního sloupce zleva, jehož filtrem prošly."
+
+msgid "Hidden tasks only pass filters of the form ``hide`` or ``hide & expr``."
+msgstr ""
+"Jen skryté úkoly se vyfiltrují výrazy tvaru ``hide`` nebo ``hide & expr``."
+
+msgid "Title"
+msgstr "Název"
+
+msgid "Comma separated list of filters."
+msgstr "Seznam filtrů oddělených čárkou."
+
+msgid "Due"
+msgstr "Do"
+
+msgid "Created"
+msgstr ""
+
+#, fuzzy
+msgid "Completed"
+msgstr "Dokončených Pomodor"
+
+msgid "No time tracker file selected."
+msgstr "Není vybrán soubor sledování času."
+
+msgid "Open time tracker settings"
+msgstr "Otevřít nastavení sledování času"
+
+msgid "The text of the corresponding tracker slot does not match this task."
+msgstr "Text příslušného slotu pro sledování neodpovídá tomuto úkolu."
+
+msgid "Here is what the text in the slot currently looks like:"
+msgstr "V současné době vypadá text ve slotu takto:"
+
+msgid "You can do one of the following:"
+msgstr "Můžete udělat jednu z následujících akcí:"
+
+msgid "Create a new slot leaving the old one in the tracker."
+msgstr "Vytvoření nového slotu s ponecháním starého."
+
+msgid "Update the current slot to match with this task."
+msgstr "Aktualizujte aktuální slot tak, aby odpovídal tomuto úkolu."
+
+msgid "Create new slot"
+msgstr "Vytvořte nový slot"
+
+msgid "Update current slot"
+msgstr "Aktualizujte aktuální slot"
+
+msgid "Stop tracking"
+msgstr "Stop sledování"
+
+msgid "Stats"
+msgstr "Statistiky"
+
+msgid "Start tracking"
+msgstr "Start sledování"
+
+msgid "Delete selected tasks"
+msgstr "Smaž vybrané úkoly"
+
+msgid "Copy selected tasks to file"
+msgstr "Zkopíruj vybrané úkoly"
+
+msgid "Modify attributes of selected tasks"
+msgstr "Změň atributy vybraných úkolů"
+
+msgid "Space separated list of task attributes"
+msgstr "Mezerou oddělený seznam atributů úkolů"
+
+msgid "Delete"
+msgstr "Smaž"
+
+msgid "Add"
+msgstr "Přidej"
+
+msgid "Apply"
+msgstr "Proveď"
+
+msgid ""
+"Tasks are sorted by the first attribute in this list.\n"
+"In case of a tie, by the second attribute, and so on..."
+msgstr ""
+"Úlohy jsou v tomto seznamu seřazeny podle prvního atributu.\n"
+"V případě rovnosti prvního, podle druhého atributu atd..."
+
+#, fuzzy
+msgid "Import file"
+msgstr "Důležité"
+
+#, fuzzy
+msgid "Export file"
+msgstr "Todo soubor"
+
+msgid ""
+"Import and/or export your tasks to the **``todo.txt``** format.\n"
+"\n"
+"The import/export files are optional and must be in the **``todo.txt``** "
+"format.\n"
+"\n"
+"First the tasks from the import file (if there is one) get appended to your "
+"todo file,\n"
+"then all tasks get exported to the export file (if there is one)."
+msgstr ""
+
+msgid "Add task"
+msgstr "Přidej úkol"
+
+msgid "Search tasks"
+msgstr "Prohledej úkoly"
+
+msgid "Todo file"
+msgstr "Todo soubor"
+
+msgid "Open time tracker"
+msgstr "Otevři sledování času"
+
+msgid "Open todo file"
+msgstr "Otevři Todo soubor"
+
+msgid "Pin"
+msgstr "Připni"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Done"
+msgstr "Hotovo"
+
+msgid "Hide"
+msgstr "Skryj"
+
+msgid "You must select a todo file."
+msgstr "Musíte vybrat soubor Todo."
+
+msgid "A todo file is a text file containing markup."
+msgstr "Soubor Todo je textový soubor obsahující značky."
+
+msgid "To learn about the markup, open the built-in editor and press F1."
+msgstr ""
+"Chcete-li se seznámit se značkami, otevřete vestavěný editor a stiskněte "
+"klávesu F1."
 
 msgid "Add Alarm"
 msgstr "Přidej nový budík"
@@ -153,20 +345,14 @@ msgstr "Přidej nový budík"
 msgid "Alarm."
 msgstr "Budík"
 
-msgid "Time"
-msgstr "Čas"
-
 msgid "Snooze n minutes"
 msgstr "Odložit n minut"
 
-msgid "Cancel"
-msgstr "Zruš"
+msgid "Alarm"
+msgstr "Budík"
 
 msgid "Snooze"
 msgstr "Odložit"
-
-msgid "Dismiss"
-msgstr "Odvolat"
 
 #, fuzzy
 msgid "Add card"
@@ -227,9 +413,6 @@ msgstr ""
 msgid "Wrong"
 msgstr ""
 
-msgid "Close"
-msgstr "Zavřít"
-
 msgid "Do fuzzy search"
 msgstr ""
 
@@ -242,9 +425,6 @@ msgstr ""
 #, fuzzy
 msgid "Delete selected cards"
 msgstr "Smaž vybrané úkoly"
-
-msgid "Apply"
-msgstr "Proveď"
 
 #, fuzzy
 msgid "Search decks"
@@ -261,293 +441,113 @@ msgstr ""
 msgid "Remove selected decks"
 msgstr "Smaž vybrané úkoly"
 
-msgid ""
-"Set to 0 for default font size.\n"
-"You can also adjust the font size by scrolling the mouse wheel over the "
-"clock label."
-msgstr ""
+msgid "Left"
+msgstr "Vlevo"
 
-msgid "Show time in panel"
-msgstr "Zobrazit čas v panelu"
+msgid "Center"
+msgstr "Střed"
 
-msgid "Clock size"
-msgstr ""
+msgid "Right"
+msgstr "Vpravo"
 
-msgid "Start"
-msgstr "Start"
+msgid "Settings"
+msgstr "Nastavení"
 
-msgid "Pause"
-msgstr "Pauza"
-
-msgid "Resume"
-msgstr "Obnovení"
-
-msgid "Reset"
-msgstr "Reset"
-
-msgid "Lap"
-msgstr "Kolo"
-
-msgid "Copy"
-msgstr "Kopírovat"
-
-msgid "Lap Time"
-msgstr "Čas kola"
-
-msgid "Overall Time"
-msgstr "Celkový čas"
-
-msgid "Lap Times"
-msgstr "Čas kol"
-
-msgid "Laps table copied to clipboard!"
-msgstr "Tabulka kol zkopírována do schránky!"
-
-msgid "Show presets"
-msgstr "Předvolby"
-
-#, fuzzy
-msgid "Timer elapsed."
-msgstr "Časovač vypršel!"
-
-msgid "Add Preset"
-msgstr "Přidat předvolbu"
-
-msgid "Invalid time selected."
-msgstr "Zvolen neplatný čas."
-
-msgid "Timer Elapsed!"
-msgstr "Časovač vypršel!"
-
-msgid "Restart"
-msgstr "Restart"
-
-msgid "Filter expression"
-msgstr "Výraz filtru"
-
-msgid "Delete selected tasks"
-msgstr "Smaž vybrané úkoly"
-
-msgid "Copy selected tasks to file"
-msgstr "Zkopíruj vybrané úkoly"
-
-msgid "Modify attributes of selected tasks"
-msgstr "Změň atributy vybraných úkolů"
-
-msgid "Space separated list of task attributes"
-msgstr "Mezerou oddělený seznam atributů úkolů"
-
-msgid "Delete"
-msgstr "Smaž"
-
-msgid "Add"
-msgstr "Přidej"
-
-msgid "Add task"
-msgstr "Přidej úkol"
-
-msgid "Search tasks"
-msgstr "Prohledej úkoly"
-
-msgid "Todo file"
-msgstr "Todo soubor"
-
-msgid "Open time tracker"
-msgstr "Otevři sledování času"
-
-msgid "Open todo file"
-msgstr "Otevři Todo soubor"
-
-msgid "Pin"
-msgstr "Připni"
-
-msgid "Priority"
-msgstr "Priorita"
-
-msgid "Due"
-msgstr "Do"
-
-msgid "Done"
-msgstr "Hotovo"
-
-msgid "Hide"
-msgstr "Skryj"
-
-msgid "Ascending"
-msgstr "Vzestupně"
-
-msgid "Descending"
-msgstr "Sestupně"
-
-msgid "You must select a todo file."
-msgstr "Musíte vybrat soubor Todo."
-
-msgid "A todo file is a text file containing markup."
-msgstr "Soubor Todo je textový soubor obsahující značky."
-
-msgid "To learn about the markup, open the built-in editor and press F1."
-msgstr ""
-"Chcete-li se seznámit se značkami, otevřete vestavěný editor a stiskněte "
-"klávesu F1."
+msgid "Website"
+msgstr "Webové stránky"
 
 msgid ""
-"Tasks are sorted by the first attribute in this list.\n"
-"In case of a tie, by the second attribute, and so on..."
+"Number of items shown each time you press \"show more\" in a scroll list.\n"
+"Making this number very large can cause performance issues."
 msgstr ""
-"Úlohy jsou v tomto seznamu seřazeny podle prvního atributu.\n"
-"V případě rovnosti prvního, podle druhého atributu atd..."
 
-msgid "Add Task"
-msgstr "Přidej úkol"
+msgid "Todo"
+msgstr "Todo"
 
-msgid "Add Filter"
-msgstr "Přidej filtr"
+msgid "Timer"
+msgstr "Časovač"
 
-msgid "## Filter Groups"
-msgstr "## Skupina filtrů"
+msgid "Stopwatch"
+msgstr "Stopky"
 
-msgid "Each filter in a group creates a column of tasks in the main view."
-msgstr "Každý filtr ve skupině vytvoří sloupec úloh v hlavním zobrazení."
+msgid "Flashcards"
+msgstr ""
 
-#, fuzzy
+msgid "Theme css (empty for auto selection)"
+msgstr "Motiv css (prázdný pro automatický výběr)"
+
+msgid "Lazy list page size"
+msgstr "Velikost stránky lazy listu"
+
 msgid ""
-"If no group is selected, a group with 1 ``* & !hide`` filter is created."
+"Right click any of the extension panel items to access the global settings."
 msgstr ""
-"Pokud není vybrána žádná skupina, vytvoří se skupina s 1 filtrem ``*``."
+"Kliknutím pravým tlačítkem na položku panelu rozšíření získáte přístup ke "
+"globálním nastavením."
 
-msgid "Tasks go into the first column from the left whose filter they pass."
-msgstr "Úkoly jsou zařazeny do prvního sloupce zleva, jehož filtrem prošly."
+msgid "Sun"
+msgstr "Ne"
 
-msgid "Hidden tasks only pass filters of the form ``hide`` or ``hide & expr``."
-msgstr ""
-"Jen skryté úkoly se vyfiltrují výrazy tvaru ``hide`` nebo ``hide & expr``."
+msgid "Mon"
+msgstr "Po"
 
-msgid "Title"
-msgstr "Název"
+msgid "Tue"
+msgstr "Út"
 
-msgid "Comma separated list of filters."
-msgstr "Seznam filtrů oddělených čárkou."
+msgid "Wed"
+msgstr "St"
+
+msgid "Thu"
+msgstr "Čt"
+
+msgid "Fri"
+msgstr "Pá"
+
+msgid "Sat"
+msgstr "So"
+
+msgid "Today"
+msgstr "Dnes"
+
+msgid "Week"
+msgstr "Týden"
+
+msgid "Month"
+msgstr "Měsíc"
+
+msgid "Year"
+msgstr "Rok"
+
+msgid "Show more"
+msgstr "Zobrazit více"
+
+msgid "Image not found"
+msgstr "Obrázek nenalezen"
+
+msgid "Tip"
+msgstr "Tip"
+
+msgid "Note"
+msgstr "Poznámka"
+
+msgid "Warning"
+msgstr "Varování"
 
 #, fuzzy
-msgid "Import file"
+msgid "Important"
 msgstr "Důležité"
 
-#, fuzzy
-msgid "Export file"
-msgstr "Todo soubor"
+msgid "Select folder"
+msgstr "Vyber adresář"
 
-msgid ""
-"Import and/or export your tasks to the **``todo.txt``** format.\n"
-"\n"
-"The import/export files are optional and must be in the **``todo.txt``** "
-"format.\n"
-"\n"
-"First the tasks from the import file (if there is one) get appended to your "
-"todo file,\n"
-"then all tasks get exported to the export file (if there is one)."
-msgstr ""
+msgid "Select file"
+msgstr "Vyber soubor"
 
-msgid "Select time tracker file"
-msgstr "Zvol soubor sledování času"
+msgid "Confirm"
+msgstr "Potvrď"
 
-#, fuzzy
-msgid "Date (e.g., 2000-01-24)"
-msgstr "Datum (například 2023-12-24)"
+msgid "Set shortcut"
+msgstr "Nastav klávesovou zkratku"
 
-msgid "Since"
-msgstr "Od"
-
-msgid "Until"
-msgstr "Do"
-
-msgid "Stop"
-msgstr "Stop"
-
-msgid "Totals"
-msgstr "Celkem"
-
-msgid "Search results copied to clipboard!"
-msgstr "Výsledek hledání zkopírován do schránky!"
-
-msgid "All Time"
-msgstr "Po celou dobu"
-
-msgid "Per Slot Totals"
-msgstr "Celkové součty na slot"
-
-msgid "Task text copied to clipboard!"
-msgstr "Text úlohy zkopírován do schránky!"
-
-msgid "Created"
-msgstr ""
-
-#, fuzzy
-msgid "Completed"
-msgstr "Dokončených Pomodor"
-
-msgid "No time tracker file selected."
-msgstr "Není vybrán soubor sledování času."
-
-msgid "Open time tracker settings"
-msgstr "Otevřít nastavení sledování času"
-
-msgid "The text of the corresponding tracker slot does not match this task."
-msgstr "Text příslušného slotu pro sledování neodpovídá tomuto úkolu."
-
-msgid "Here is what the text in the slot currently looks like:"
-msgstr "V současné době vypadá text ve slotu takto:"
-
-msgid "You can do one of the following:"
-msgstr "Můžete udělat jednu z následujících akcí:"
-
-msgid "Create a new slot leaving the old one in the tracker."
-msgstr "Vytvoření nového slotu s ponecháním starého."
-
-msgid "Update the current slot to match with this task."
-msgstr "Aktualizujte aktuální slot tak, aby odpovídal tomuto úkolu."
-
-msgid "Create new slot"
-msgstr "Vytvořte nový slot"
-
-msgid "Update current slot"
-msgstr "Aktualizujte aktuální slot"
-
-msgid "Stop tracking"
-msgstr "Stop sledování"
-
-msgid "Stats"
-msgstr "Statistiky"
-
-msgid "Start tracking"
-msgstr "Start sledování"
-
-msgid "Long Break"
-msgstr "Dlouhá pauza"
-
-msgid "Short Break"
-msgstr "Krátká pauza"
-
-#, fuzzy
-msgid "Pomodoro phase change."
-msgstr "Délka Pomodoro"
-
-msgid "Phase"
-msgstr "Fáze"
-
-msgid "Completed pomodoros"
-msgstr "Dokončených Pomodor"
-
-msgid "Pomodoros until long break"
-msgstr "Pomodor do dlouhé přestávky"
-
-msgid "Pomodoro length"
-msgstr "Délka Pomodoro"
-
-msgid "Short break length"
-msgstr "Délka krátké pauzy"
-
-msgid "Long break length"
-msgstr "Délka dlouhé pauzy"
-
-msgid "Long break every n pomodoros"
-msgstr "Dlouhá pauza každý n pomodor"
+msgid "Type shortcut (backspace to reset)"
+msgstr "Stikni klávesovou zkratku (backspace pro resetování)"
