@@ -634,6 +634,12 @@ declare module 'gi://Gio' {
         abstract class Icon extends GObject.Object {
             static new_for_string (path: string): Icon;
         }
+
+        class Settings extends GObject.Object {
+            constructor (params: { schema: string });
+            get_boolean (key: string): boolean;
+            set_boolean (key: string, value: boolean): boolean;
+        }
     }
 
     export default Gio;

@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Clutter from 'gi://Clutter';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -81,6 +82,9 @@ export class PomodoroApplet extends Applet<Events> {
 
     #tic_id = 0;
     #current_view: null | { destroy: () => void } = null;
+    #dnd_settings = new Gio.Settings({ schema: 'org.gnome.desktop.notifications' });
+    #dnd_active = false;
+    #dnd_was_showing_banners = true;
 
     constructor (ext: Cronomix) {
         super(ext, 'pomodoro');
@@ -125,8 +129,20 @@ export class PomodoroApplet extends Applet<Events> {
         return this.#tic_id > 0;
     }
 
+    #set_dnd (enable: boolean) {
+        if (enable && !this.#dnd_active) {
+            this.#dnd_was_showing_banners = this.#dnd_settings.get_boolean('show-banners');
+            this.#dnd_settings.set_boolean('show-banners', false);
+            this.#dnd_active = true;
+        } else if (!enable && this.#dnd_active) {
+            this.#dnd_settings.set_boolean('show-banners', this.#dnd_was_showing_banners);
+            this.#dnd_active = false;
+        }
+    }
+
     start () {
         if (this.storage.read.show_panel_label.value) this.panel_label.show();
+        if (this.phase === 'pomodoro') this.#set_dnd(true);
         this.publish('timer_state_changed', true);
         this.#tic();
     }
@@ -135,6 +151,7 @@ export class PomodoroApplet extends Applet<Events> {
         this.sound_cancel?.cancel();
         this.panel_label.hide();
         if (this.#tic_id) { GLib.source_remove(this.#tic_id); this.#tic_id = 0; }
+        this.#set_dnd(false);
         this.publish('timer_state_changed', false);
     }
 
@@ -169,6 +186,7 @@ export class PomodoroApplet extends Applet<Events> {
             this.storage.modify('pomos_until_long_break', v => v.value--);
         }
 
+        this.#set_dnd(next_phase === 'pomodoro');
         this.set_phase(next_phase, false);
         this.sound_cancel = Misc.play_sound(this.storage.read.notif_sound.value);
     }
