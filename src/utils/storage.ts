@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -133,7 +134,7 @@ export class Storage <
         const groups = this.config.groups ?? [Object.keys(this.config.values)];
 
         for (const group of groups) {
-            const rows_box = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+            const rows_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
             scrollbox.box.add_child(rows_box);
 
             for (const key of group) {

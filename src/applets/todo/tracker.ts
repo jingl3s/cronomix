@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -242,13 +243,13 @@ export class TimeTrackerView {
         //
         // left column
         //
-        const left_column = new St.BoxLayout({ vertical: true, x_expand: true, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
+        const left_column = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
         this.actor.add_child(left_column);
 
         //
         // file selection card
         //
-        const file_selection_card = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const file_selection_card = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         left_column.add_child(file_selection_card);
 
         const fsc_row1 = new St.BoxLayout({ style_class: 'cronomix-spacing' });
@@ -262,7 +263,7 @@ export class TimeTrackerView {
         //
         // search data card
         //
-        const query_card = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-group' });
+        const query_card = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-group' });
         left_column.add_child(query_card);
 
         const sdc_filter_row = new St.BoxLayout({ x_expand: true, style_class: 'cronomix-spacing' });
@@ -294,7 +295,7 @@ export class TimeTrackerView {
         //
         // currently tracking card
         //
-        this.#tracking_card = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-group' });
+        this.#tracking_card = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-group' });
         left_column.add_child(this.#tracking_card);
 
         const ctc_preview_button = new Button({ icon: 'cronomix-eye-symbolic' });
@@ -316,7 +317,7 @@ export class TimeTrackerView {
         //
         // right column
         //
-        const right_column = new St.BoxLayout({ vertical: true, x_expand: true, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
+        const right_column = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
         this.actor.add_child(right_column);
 
         //

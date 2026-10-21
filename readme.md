@@ -7,7 +7,7 @@
 
 ## Installation
 
-- The latest version supports gnome-shell 49 and 50.
+- The latest version supports gnome-shell 49, 50 and 51.
 - The latest and older versions of the extension can be installed from
   the [gnome website](https://extensions.gnome.org/extension/6003/cronomix/).
 - The latest version can also be installed manually:

@@ -195,7 +195,7 @@ class MainView {
 
     constructor (applet: TimerApplet) {
         this.#applet = applet;
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         //
         // Header
@@ -318,7 +318,7 @@ class Presets {
     actor: St.BoxLayout;
 
     constructor (applet: TimerApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         const presets = applet.storage.read.presets.value;
 
@@ -374,7 +374,7 @@ class PresetEditor extends EditorView {
     constructor (applet: TimerApplet, preset?: Preset) {
         super();
 
-        const group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.main_view.left_box.add_child(group);
 
         Misc.focus_when_mapped(this.main_view.entry.entry);
@@ -420,7 +420,7 @@ class TimerElapsedView {
     actor: St.BoxLayout;
 
     constructor (applet: TimerApplet, preset: Preset) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         const scrollbox = new ScrollBox();
         this.actor.add_child(scrollbox.actor);

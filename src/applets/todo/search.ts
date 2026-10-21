@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import { TodoApplet } from './main.js';
@@ -32,12 +33,12 @@ export class SearchView {
         //
         const left_box = new ScrollBox(false);
         this.actor.add_child(left_box.actor);
-        left_box.box.vertical = true;
+        left_box.box.orientation = Clutter.Orientation.VERTICAL;
 
         //
         // entry
         //
-        const entry_box = new St.BoxLayout({ vertical: true, style_class: 'cronomix-headered-entry' });
+        const entry_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-headered-entry' });
         left_box.box.add_child(entry_box);
 
         const header = new St.BoxLayout({ style: 'min-width: 256px;', style_class: 'header' });
@@ -53,23 +54,23 @@ export class SearchView {
         //
         // bulk edit menu
         //
-        const bulk_edit_menu = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        const bulk_edit_menu = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
         left_box.box.add_child(bulk_edit_menu);
 
-        const bem_card0 = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const bem_card0 = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         bulk_edit_menu.add_child(bem_card0);
 
         const bem_delete_checkbox = new CheckBox();
         const del_row = new Row(_('Delete selected tasks'), bem_delete_checkbox.actor, bem_card0);
         del_row.label.add_style_class_name('cronomix-red');
 
-        const bem_card1 = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const bem_card1 = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         bulk_edit_menu.add_child(bem_card1);
 
         const bem_export_picker = new FilePicker();
         new Row(_('Copy selected tasks to file'), bem_export_picker.actor, bem_card1);
 
-        const bem_card2 = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const bem_card2 = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         bulk_edit_menu.add_child(bem_card2);
 
         const bem_card_info_button = new Button({ icon: 'cronomix-question-symbolic' });

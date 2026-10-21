@@ -162,7 +162,7 @@ class MainView {
     actor: St.BoxLayout;
 
     constructor (applet: AlarmApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         const header = new St.BoxLayout();
         this.actor.add_child(header);
@@ -233,7 +233,7 @@ class AlarmEditor extends EditorView {
         const day_picker = new DayPicker(alarm?.days);
         this.main_view.left_box.add_child(day_picker.actor);
 
-        const group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.main_view.left_box.add_child(group);
 
         const time = new T.Time(60000 * (alarm?.time ?? applet.wallclock.time));
@@ -318,7 +318,7 @@ class Notification {
     dismiss_button: Button;
 
     constructor (alarm: Alarm) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-box' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-box' });
 
         this.actor.add_child(new Markup(alarm.msg || _('Alarm')).actor);
 

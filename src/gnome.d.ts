@@ -79,7 +79,7 @@ declare module 'gi://St' {
         }
 
         class BoxLayout extends Widget {
-            vertical: boolean;
+            orientation: Clutter.Orientation;
             constructor (...args: unknown[]);
             layout_manager: Clutter.BoxLayout;
         }
@@ -209,6 +209,11 @@ declare module 'gi://Clutter' {
 
         const EVENT_STOP: boolean;
         const EVENT_PROPAGATE: boolean;
+
+        enum Orientation {
+            HORIZONTAL,
+            VERTICAL,
+        }
 
         enum EventType {
             NOTHING,

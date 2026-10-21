@@ -155,7 +155,7 @@ class MainView {
 
     constructor (applet: StopwatchApplet) {
         this.#applet = applet;
-        this.actor = new St.BoxLayout({ vertical: true, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style: 'min-width: 256px;', style_class: 'cronomix-spacing' });
 
         //
         // Header

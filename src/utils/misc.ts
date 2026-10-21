@@ -139,7 +139,7 @@ export function adjust_height (widget: St.Widget, child: Clutter.Actor = widget)
 export function get_cell_box (widget: St.Widget): St.Widget {
     const layout = new Clutter.GridLayout();
     const table  = new St.Widget({ x_expand: true, layout_manager: layout });
-    const cell   = new St.BoxLayout({ x_expand: true, vertical: true });
+    const cell   = new St.BoxLayout({ x_expand: true, orientation: Clutter.Orientation.VERTICAL });
     layout.attach(cell, 0, 0, 1, 1);
     cell.add_child(widget);
     return table;
@@ -277,7 +277,7 @@ export class Card {
     autohide_box: St.BoxLayout;
 
     constructor () {
-        this.actor = new St.BoxLayout({ reactive: true, vertical: true, x_expand: true, style_class: 'cronomix-card cronomix-box' });
+        this.actor = new St.BoxLayout({ reactive: true, orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-card cronomix-box' });
 
         this.header = new St.BoxLayout({ style_class: 'header' });
         this.actor.add_child(this.header);
@@ -301,7 +301,7 @@ export class Dropdown {
     body: St.BoxLayout;
 
     constructor (label: string) {
-        this.actor = new St.BoxLayout({ reactive: true, vertical: true, x_expand: true, style_class: 'cronomix-dropdown' });
+        this.actor = new St.BoxLayout({ reactive: true, orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-dropdown' });
 
         const header = new St.BoxLayout({ style_class: 'header' });
         this.actor.add_child(header);
@@ -329,7 +329,7 @@ export class CellBox {
     constructor (parent?: St.Widget, child?: St.Widget) {
         const layout = new Clutter.GridLayout();
         this.table   = new St.Widget({ x_expand: true, layout_manager: layout });
-        this.cell    = new St.BoxLayout({ x_expand: true, vertical: true });
+        this.cell    = new St.BoxLayout({ x_expand: true, orientation: Clutter.Orientation.VERTICAL });
 
         layout.attach(this.cell, 0, 0, 1, 1);
 

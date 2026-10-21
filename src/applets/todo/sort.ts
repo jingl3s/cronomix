@@ -54,9 +54,9 @@ export class SortView {
     actor: St.BoxLayout;
 
     constructor (applet: TodoApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
-        const box = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.actor.add_child(box);
 
         for (const [idx, entry] of applet.storage.read.sort.value.entries()) {

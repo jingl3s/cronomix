@@ -15,9 +15,9 @@ export class Entry {
     history = new Array<TextAction>();
 
     constructor (hint_text = '', scrollable = true) {
-        this.actor = new St.BoxLayout({ x_expand: true, vertical: true });
+        this.actor = new St.BoxLayout({ x_expand: true, orientation: Clutter.Orientation.VERTICAL });
 
-        const entry_container = new St.BoxLayout({ reactive: true, vertical: true });
+        const entry_container = new St.BoxLayout({ reactive: true, orientation: Clutter.Orientation.VERTICAL });
 
         if (scrollable) {
             const scroll = new ScrollBox();

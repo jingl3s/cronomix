@@ -193,7 +193,7 @@ class MainView {
     actor: St.BoxLayout;
 
     constructor (applet: FlashcardsApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         //
         // header
@@ -314,7 +314,7 @@ export class CardEditor {
     actor: St.BoxLayout;
 
     constructor (applet: FlashcardsApplet, card?: Card) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-flashcard-editor cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-flashcard-editor cronomix-spacing' });
 
         const question_editor = new EditorView();
         this.actor.add_child(question_editor.actor);
@@ -325,7 +325,7 @@ export class CardEditor {
         answer_editor.show_help_button.actor.hide();
         answer_editor.main_view.entry_header.insert_child_at_index(new St.Label({ text: _('Answer'), y_align: Clutter.ActorAlign.CENTER }), 0);
 
-        const group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         answer_editor.main_view.left_box.add_child(group);
 
         Misc.focus_when_mapped(question_editor.main_view.entry.entry);
@@ -368,9 +368,9 @@ export class ExamView {
     actor: St.BoxLayout;
 
     constructor (applet: FlashcardsApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
-        const group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.actor.add_child(group);
 
         const session_count = new IntPicker(1, 32, applet.deck.session);
@@ -464,19 +464,19 @@ export class SearchView {
     actor: St.BoxLayout;
 
     constructor (applet: FlashcardsApplet) {
-        this.actor = new St.BoxLayout({ vertical: false, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ style_class: 'cronomix-spacing' });
 
         //
         // left box
         //
         const left_box = new ScrollBox(false);
         this.actor.add_child(left_box.actor);
-        left_box.box.vertical = true;
+        left_box.box.orientation = Clutter.Orientation.VERTICAL;
 
         //
         // entry
         //
-        const entry_group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const entry_group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         left_box.box.add_child(entry_group);
 
         const entry = new Entry(_('Search cards'));
@@ -493,7 +493,7 @@ export class SearchView {
         //
         // bulk edit options
         //
-        const bem_group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const bem_group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         left_box.box.add_child(bem_group);
 
         const bucket_picker = new IntPicker(-1, 5, -1);
@@ -606,7 +606,7 @@ export class DeckView {
     constructor (applet: FlashcardsApplet) {
         this.actor = new St.BoxLayout({ style_class: 'cronomix-spacing' });
 
-        const left_box = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        const left_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
         this.actor.add_child(left_box);
 
         //
@@ -620,7 +620,7 @@ export class DeckView {
         //
         // import/export group
         //
-        const import_export_group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const import_export_group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         left_box.add_child(import_export_group);
 
         //
@@ -644,7 +644,7 @@ export class DeckView {
         //
         // delete row
         //
-        const delete_row = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const delete_row = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         left_box.add_child(delete_row);
 
         const delete_decks_checkbox = new CheckBox();

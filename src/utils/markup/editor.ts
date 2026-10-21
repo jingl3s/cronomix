@@ -43,13 +43,13 @@ export class Editor {
         //
         // box containing the entry
         //
-        this.left_box = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-spacing' });
+        this.left_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-spacing' });
         this.actor.add_child(this.left_box);
 
         //
         // headered entry
         //
-        this.header_entry = new St.BoxLayout({ x_expand: true, style_class: 'cronomix-headered-entry', vertical: true });
+        this.header_entry = new St.BoxLayout({ x_expand: true, style_class: 'cronomix-headered-entry', orientation: Clutter.Orientation.VERTICAL });
         this.left_box.add_child(this.header_entry);
 
         //

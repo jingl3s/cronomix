@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
 import { gettext as _ } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import { TodoApplet } from './main.js';
@@ -16,9 +17,9 @@ export class ImportExportView {
     actor: St.BoxLayout;
 
     constructor (applet: TodoApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
-        const rows_box = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const rows_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.actor.add_child(rows_box);
 
         const import_picker = new FilePicker();

@@ -28,7 +28,7 @@ export class KanbanView {
 
     constructor (applet: TodoApplet) {
         this.#applet = applet;
-        this.actor = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-spacing' });
 
         //
         // Header
@@ -124,7 +124,7 @@ class KanbanColumn {
 
     constructor (applet: TodoApplet, filter: P.AstFilter, show_filter_header = true) {
         this.filter = filter;
-        this.actor = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-spacing' });
 
         if (show_filter_header) {
             const header = new St.Label({ y_align: Clutter.ActorAlign.CENTER, text: P.filter_to_string(filter), style: 'min-width: 300px; font-weight: bold;', style_class: 'cronomix-box' });
@@ -146,7 +146,7 @@ export class FilterView {
 
     constructor (applet: TodoApplet) {
         this.#applet = applet;
-        this.actor = new St.BoxLayout({ x_expand: true, vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ x_expand: true, orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         this.#cards_scroll = new ScrollBox();
         this.actor.add_child(this.#cards_scroll.actor);

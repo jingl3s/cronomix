@@ -13,7 +13,7 @@ export class ScrollBox {
     constructor (vertical = true) {
         this.actor = new St.ScrollView({ x_expand: true, style_class: 'cronomix-scrollbox' });
 
-        this.box = new St.BoxLayout({ vertical, x_expand: true, style_class: 'cronomix-spacing' });
+        this.box = new St.BoxLayout({ orientation: vertical ? Clutter.Orientation.VERTICAL : Clutter.Orientation.HORIZONTAL, x_expand: true, style_class: 'cronomix-spacing' });
         this.actor.add_child(this.box);
 
         if (vertical) {

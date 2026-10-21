@@ -46,7 +46,7 @@ export class Markup {
 
     constructor (text: string, nodes?: P.AstBlock[], render_meta?: RenderMetaFn) {
         if (render_meta) this.#custom_render_meta = render_meta;
-        this.actor = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'cronomix-markup' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-markup' });
         this.render(text, nodes);
     }
 
@@ -96,7 +96,7 @@ export class Markup {
 
         // Hold onto the old widget tree so we can reuse some widgets.
         const prev_content = this.#content;
-        this.#content = new St.BoxLayout({ reactive: true, vertical: true, x_expand: true, style_class: 'cronomix-spacing' });
+        this.#content = new St.BoxLayout({ reactive: true, orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'cronomix-spacing' });
 
         this.actor.remove_all_children();
         this.actor.add_child(this.#content);
@@ -138,7 +138,7 @@ export class Markup {
         case 'AstList':
         case 'AstOrderedList': {
             const ordered = (block.tag === 'AstOrderedList');
-            result = this.#widget(block, () => new St.BoxLayout({ vertical: true }));
+            result = this.#widget(block, () => new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL }));
             result.style_class = ordered ? 'ordered-list' : 'list';
 
             for (const [idx, child] of block.children.entries()) {
@@ -149,7 +149,7 @@ export class Markup {
                 const bullet = new St.Label({ text: ordered ? (idx + 1) + '.' : '•', style_class: 'bullet' });
                 item.add_child(bullet);
 
-                const content = new St.BoxLayout({ vertical: true, x_expand: true, style_class: 'block cronomix-spacing' });
+                const content = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true, style_class: 'block cronomix-spacing' });
                 item.add_child(content);
 
                 for (const c of child.children) content.add_child(this.#render_block(c));
@@ -164,7 +164,7 @@ export class Markup {
         } break;
 
         case 'AstRawBlock': {
-            result = this.#widget(block, () => new St.BoxLayout({ vertical: true, reactive: true, style_class: 'raw-block' }));
+            result = this.#widget(block, () => new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, reactive: true, style_class: 'raw-block' }));
             for (const child of block.children) result.add_child(this.#render_block(child));
             result;
         } break;
@@ -189,7 +189,7 @@ export class Markup {
     }
 
     #render_meta (meta: P.AstMeta): St.Widget {
-        const body = new St.BoxLayout({ reactive: true, vertical: true, style_class: 'block cronomix-spacing' });
+        const body = new St.BoxLayout({ reactive: true, orientation: Clutter.Orientation.VERTICAL, style_class: 'block cronomix-spacing' });
         for (const child of meta.children) body.add_child(this.#render_block(child));
 
         if (this.#custom_render_meta) {
@@ -201,7 +201,7 @@ export class Markup {
             const info = meta.config.image!;
             return this.#widget(meta, () => new Image(info.path, 300, info.width).actor, true);
         } else if (meta.config.admonition !== undefined) {
-            const admonition = this.#widget(meta, () => new St.BoxLayout({ vertical: true }));
+            const admonition = this.#widget(meta, () => new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL }));
             admonition.style_class = `admonition ${meta.config.admonition} cronomix-group`;
 
             const header = new St.BoxLayout({ style_class: 'header cronomix-spacing' });
@@ -279,7 +279,7 @@ export class Markup {
                 }
 
                 { // Add cell widget:
-                    const cell_widget = this.#widget(cell, () => new St.BoxLayout({ x_expand: true, vertical: true }));
+                    const cell_widget = this.#widget(cell, () => new St.BoxLayout({ x_expand: true, orientation: Clutter.Orientation.VERTICAL }));
                     cell_widget.style_class = 'block cell';
                     this.#ast_to_widget.set(cell, cell_widget);
                     widget_to_ast.set(cell_widget, cell);

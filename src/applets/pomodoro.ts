@@ -245,7 +245,7 @@ class MainView {
 
     constructor (applet: PomodoroApplet) {
         this.#applet = applet;
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         //
         // Header
@@ -265,7 +265,7 @@ class MainView {
         //
         // phase info box
         //
-        const phase_info = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const phase_info = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.actor.add_child(phase_info);
 
         const phase_dropdown = new Dropdown(applet.phase, Object.keys(Phase), Object.values(Phase));
@@ -358,7 +358,7 @@ class PresetsView {
     actor: St.BoxLayout;
 
     constructor (applet: PomodoroApplet) {
-        this.actor = new St.BoxLayout({ vertical: true, style_class: 'cronomix-spacing' });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-spacing' });
 
         const presets = applet.storage.read.presets.value;
 
@@ -409,7 +409,7 @@ class PresetEditor extends EditorView {
 
         this.main_view.entry.entry.set_text(preset?.text ?? '');
 
-        const group = new St.BoxLayout({ vertical: true, style_class: 'cronomix-group' });
+        const group = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, style_class: 'cronomix-group' });
         this.main_view.left_box.add_child(group);
 
         const pomo_picker = new TimePicker(new Time(preset?.pomodoro_length ?? 25 * 60000));

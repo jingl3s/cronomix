@@ -61,7 +61,7 @@ export class Applet <E = {}> extends PubSub<E> {
         //
         const wrapper = new Misc.CellBox(this.panel_item.menu.box);
 
-        this.menu = new St.BoxLayout({ vertical: true });
+        this.menu = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL });
         wrapper.cell.add_child(this.menu);
 
         this.panel_item.menu.box.add_style_class_name(`cronomix-${id}-menu cronomix-menu`);
@@ -124,9 +124,9 @@ export class ContextMenu {
     actor: St.BoxLayout;
 
     constructor (ext: Cronomix) {
-        this.actor = new St.BoxLayout({ vertical: true, x_expand: true });
+        this.actor = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL, x_expand: true });
 
-        const items_box = new St.BoxLayout({ vertical: true });
+        const items_box = new St.BoxLayout({ orientation: Clutter.Orientation.VERTICAL });
         this.actor.add_child(items_box);
 
         const settings_button = new Button({ parent: items_box, centered: false, icon: 'cronomix-wrench-symbolic', label: _('Settings'), style_class: 'cronomix-menu-button' });
